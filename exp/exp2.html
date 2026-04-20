@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        // This program asks the user for their name and a number between 1 and 5, then picks a color and message from arrays based on that number and displays the result on the page.
+
+        var colors = ["#f4a261", "#2a9d8f", "#e9c46a", "#264653", "#e76f51"];
+        var messages = ["You are warm and energetic.", "You are calm and focused.", "You are bright and optimistic.", "You are deep and thoughtful.", "You are bold and passionate."];
+
+        function pickResult(num) {
+            if(num === "1"){ return 0; }
+            if(num === "2"){ return 1; }
+            if(num === "3"){ return 2; }
+            if(num === "4"){ return 3; }
+            if(num === "5"){ return 4; }
+        }
+
+        function displayResult(name, index) {
+            document.body.style.backgroundColor = colors[index];
+
+            var output = "<h1>Hey, " + name + "!</h1>";
+            output = output + "<p>" + messages[index] + "</p>";
+            output = output + "<p>Here are all the options:</p><ul>";
+
+            for(var i=0; i<messages.length; i++){
+                output = output + "<li>" + (i + 1) + ". " + messages[i] + "</li>";
+            }
+
+            output = output + "</ul>";
+            document.querySelector('#result').innerHTML = output;
+        }
+
+        var userName = prompt("What is your name?");
+        var userNum = prompt("Pick a number between 1 and 5.");
+
+        if(userNum === "1" || userNum === "2" || userNum === "3" || userNum === "4" || userNum === "5"){
+            var result = pickResult(userNum);
+            displayResult(userName, result);
+        } else {
+            document.querySelector('#result').innerHTML = "<h1>Please enter a number between 1 and 5.</h1>";
+        }
+    </script>
+</body>
+</html>
