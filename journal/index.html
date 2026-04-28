@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Journal — Kaushik Lankoji</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+
+      <header>
+        <p class="back-link"><a href="../index.html">&larr; Back to Portal</a></p>
+        <h1>Learning Journal</h1>
+        <h2>Kaushik Lankoji &mdash; DES 157A &mdash; Interactive Media II &mdash; Spring 2026</h2>
+      </header>
+
+      <main>
+
+        <article>
+          <header class="post-header">
+            <h2>When to Interrupt — and When Not To</h2>
+            <time datetime="2026-04-22">April 22, 2026</time>
+          </header>
+
+          <p>
+            AFter reading  Naema Baskanderi's article on modal best practices, it made me rethink a UI
+            pattern I had always taken for granted. Modals originally solved a real problem.
+            They simplified interfaces and preserved screen real estate without navigating users
+            away from their current context. But as Baskanderi points out, designers have leaned
+            on them so heavily that they've started to feel like the pop-up windows of older and more annoying web applications. Users now close them, almost out of instinct.
+          </p>
+
+          <p>
+            What I found most useful was the distinction between <em>when</em> to use a modal
+            versus when to reach for something less disruptive, like a toast notification. A modal
+            makes sense when you need the user's full attention, such as a destructive action, or a critical alert, etc. It doesn't make sense for a newsletter signup that fires the moment someone lands on a page.
+          </p>
+
+          <p>
+            As someone learning to build interactive, user-focused web projects right now, this reframed how I think about
+            interruption as a design choice. Every modal is essentially asking the user to stop
+            what they're doing. That's a big ask, and it should be saved for a task that deserves this interruption.
+          </p>
+
+          <p>
+            Source: <a href="https://uxplanet.org/best-practices-for-modals-overlays-dialog-windows-c00c66cddd8c" target="_blank">Best Practices for Modals / Overlays / Dialog Windows — UX Planet</a>
+          </p>
+        </article>
+
+        <article>
+          <header class="post-header">
+            <h2>Best Practices for Form Design</h2>
+            <time datetime="2026-04-14">April 14, 2026</time>
+          </header>
+
+            <p>The article talks a lot about many UX conceps, but there are a few things that stand out. Essentially, the idea that the perception of complexity matters as much as actual complexity is something worth thinking about. Users can scan a form before they fill it out, and that creates a lasting first impression which sets the groundwork and shapes whether they even want to try filling it out or not. That connects directly to UI/UX work because you are not just designing fields, but you are handling someone's willingness to continue in the form. The point that the article made about placeholder text being more harmful than helpful also resonated deep to me. The placeholder text disappears the moment someone starts typing, and this puts cognitive load on the user at the worst moment. Labels should be either above or even next to inputs, but not inside them.
+            </p>
+
+          <p>
+            A form that exemplifies best practices:
+            <a href="https://www.airbnb.com" target="_blank">Airbnb's booking flow</a>
+            In terms of a real-world form that does this well, Airbnb's booking flow is a great example. It takes a complex reservation process into easy-to-navigate, clearly labeled steps that never shows more than what is needed at one time. Additionally, the inline validation as well is used perfectly, making it a perfect example of a well-built form.
+          </p>
+
+          <p>
+            Source: <a href="https://uxdesign.cc/best-practices-for-form-design-ff5de6ca8e5f" target="_blank">Best Practices for Form Design — UX Collective</a>
+          </p>
+        </article>
+
+      </main>
+
+      <footer>
+        <p>Kaushik Lankoji &mdash; <a href="mailto:&#107;&#108;&#97;&#110;&#107;&#111;&#106;&#105;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;">Email Me</a></p>
+      </footer>
+
+    </div>
+  </body>
+</html>

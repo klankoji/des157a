@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Dev Nightmare</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Game Dev Nightmare</h1>
+    <p>Fill in the blanks</p>
+</header>
+
+<main>
+
+    <img src="images/sketch.png" width="300" height="200" alt="hand drawn game sketch">
+
+    <section class="form-section">
+        <form>
+            <label for="adj">Adjective:</label>
+            <input type="text" id="adj" required>
+
+            <label for="noun">Noun:</label>
+            <input type="text" id="noun" required>
+
+            <label for="verb">Verb:</label>
+            <input type="text" id="verb" required>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" required>
+
+            <label for="animal">Animal:</label>
+            <input type="text" id="animal" required>
+
+            <input type="submit" value="Generate Story">
+        </form>
+    </section>
+
+    <section class="overlay on">
+        <p>
+            One day I made a <span class="fill">weird</span> game about a 
+            <span class="fill">toaster</span>. It started to 
+            <span class="fill">explode</span> in the 
+            <span class="fill">office</span>. Then a 
+            <span class="fill">penguin</span> showed up.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>DES 157A</p>
+</footer>
+
+</body>
+</html>
