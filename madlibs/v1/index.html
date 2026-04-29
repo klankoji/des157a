@@ -25,7 +25,7 @@
     <img src="images/sketch.png" width="300" height="200" alt="hand drawn game sketch">
 
     <section class="form-section">
-        <form>
+        <form id="myForm">
             <label for="adj">Adjective:</label>
             <input type="text" id="adj" required>
 
@@ -45,14 +45,15 @@
         </form>
     </section>
 
-    <section class="overlay on">
+    <section class="overlay off">
         <p>
-            One day I made a <span class="fill">weird</span> game about a 
-            <span class="fill">toaster</span>. It started to 
-            <span class="fill">explode</span> in the 
-            <span class="fill">office</span>. Then a 
-            <span class="fill">penguin</span> showed up.
+            One day I made a <span class="fill" id="out-adj">weird</span> game about a 
+            <span class="fill" id="out-noun">toaster</span>. It started to 
+            <span class="fill" id="out-verb">explode</span> in the 
+            <span class="fill" id="out-place">office</span>. Then a 
+            <span class="fill" id="out-animal">penguin</span> showed up.
         </p>
+        <button id="resetBtn">Try Again</button>
     </section>
 
 </main>
