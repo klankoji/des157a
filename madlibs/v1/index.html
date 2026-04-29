@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -17,7 +18,7 @@
 
 <header>
     <h1>Game Dev Nightmare</h1>
-    <p>Fill in the blanks</p>
+    <p>Fill in the blanks. Ship the game.</p>
 </header>
 
 <main>
@@ -27,33 +28,40 @@
     <section class="form-section">
         <form id="myForm">
             <label for="adj">Adjective:</label>
-            <input type="text" id="adj" required>
+            <input type="text" id="adj" placeholder="e.g. chaotic" required>
 
             <label for="noun">Noun:</label>
-            <input type="text" id="noun" required>
+            <input type="text" id="noun" placeholder="e.g. toaster" required>
 
             <label for="verb">Verb:</label>
-            <input type="text" id="verb" required>
+            <input type="text" id="verb" placeholder="e.g. explode" required>
 
             <label for="place">Place:</label>
-            <input type="text" id="place" required>
+            <input type="text" id="place" placeholder="e.g. server room" required>
 
             <label for="animal">Animal:</label>
-            <input type="text" id="animal" required>
+            <input type="text" id="animal" placeholder="e.g. penguin" required>
 
             <input type="submit" value="Generate Story">
         </form>
     </section>
 
     <section class="overlay off">
-        <p>
-            One day I made a <span class="fill" id="out-adj">weird</span> game about a 
-            <span class="fill" id="out-noun">toaster</span>. It started to 
-            <span class="fill" id="out-verb">explode</span> in the 
-            <span class="fill" id="out-place">office</span>. Then a 
-            <span class="fill" id="out-animal">penguin</span> showed up.
-        </p>
-        <button id="resetBtn">Try Again</button>
+        <div class="story">
+            <p>
+                It was a dark and stormy night at the <span class="fill" id="out-place"></span> when I decided to build the most <span class="fill" id="out-adj"></span> game ever made.
+            </p>
+            <p>
+                My only companion was a <span class="fill" id="out-animal"></span> who kept chewing on my keyboard. I told the <span class="fill" id="out-animal2"></span> to <span class="fill" id="out-verb"></span> immediately, but it just stared at me.
+            </p>
+            <p>
+                By morning, I had coded a game where a giant <span class="fill" id="out-noun"></span> roams the <span class="fill" id="out-place2"></span>, forcing every <span class="fill" id="out-animal3"></span> in sight to <span class="fill" id="out-verb2"></span> for survival.
+            </p>
+            <p>
+                The <span class="fill" id="out-noun2"></span> was <span class="fill" id="out-adj2"></span> beyond all reason. I never shipped the game. The <span class="fill" id="out-animal4"></span> still lives with me.
+            </p>
+        </div>
+        <button id="resetBtn">Play Again</button>
     </section>
 
 </main>
