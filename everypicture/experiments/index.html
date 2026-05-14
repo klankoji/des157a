@@ -2,38 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Civic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=Karla:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <div id="intro">
-    <h1>the civic</h1>
-    <p>hover over the image to explore</p>
-  </div>
+  <main id="slideshow">
 
-  <div id="image-container">
-    <img src="images/interior.jpg" alt="Civic Si interior" id="main-image">
+    <section class="slide active" id="slide-interior">
+      <figure class="slide-image">
+        <img src="images/interior.jpg" alt="Civic Si interior viewed from passenger side" width="900" height="1200">
+        <figcaption class="image-caption">interior — 2023</figcaption>
+      </figure>
+      <article class="story-panel">
+        <span class="slide-label">01 — the space</span>
+        <h2>i wanted room<br><em>for everyone.</em></h2>
+        <p>my last car only had two real seats. this one always has space.</p>
+      </article>
+    </section>
 
-    <div class="hotspot" id="sunroof">
-      <div class="label">sunroof</div>
-    </div>
+    <section class="slide" id="slide-driver">
+      <figure class="slide-image">
+        <img src="images/driver.jpg" alt="Driver perspective from behind the steering wheel at night" width="900" height="1200">
+        <figcaption class="image-caption">driver seat — night</figcaption>
+      </figure>
+      <article class="story-panel">
+        <span class="slide-label">02 — the view</span>
+        <h2>the same view,<br><em>every time.</em></h2>
+        <p>same gauges, same wheel, same feeling when it starts. it never gets old.</p>
+      </article>
+    </section>
 
-    <div class="hotspot" id="seats">
-      <div class="label">seats</div>
-    </div>
+    <section class="slide" id="slide-shifter">
+      <figure class="slide-image">
+        <img src="images/shifter.jpg" alt="Six-speed manual shifter with red stitching close-up" width="900" height="1200">
+        <figcaption class="image-caption">6-speed — si</figcaption>
+      </figure>
+      <article class="story-panel">
+        <span class="slide-label">03 — six speeds</span>
+        <h2>learned manual<br><em>in a parking lot.</em></h2>
+        <p>my roommate taught me. now i can't imagine driving any other way.</p>
+      </article>
+    </section>
 
-    <div class="hotspot" id="shifter">
-      <div class="label">shifter</div>
-    </div>
+    <section class="slide" id="slide-gauges">
+      <figure class="slide-image">
+        <img src="images/gauges.jpg" alt="Digital gauge cluster glowing through the steering wheel" width="900" height="1200">
+        <figcaption class="image-caption">gauges — always on</figcaption>
+      </figure>
+      <article class="story-panel">
+        <span class="slide-label">04 — always ready</span>
+        <h2>never once<br><em>let me down.</em></h2>
+        <p>every time the key turns, it just goes. that's all i ever needed.</p>
+      </article>
+    </section>
 
-    <div class="hotspot" id="dash">
-      <div class="label">dash</div>
-    </div>
+    <nav class="slide-nav" aria-label="Slide navigation">
+      <button class="nav-btn" id="prev" aria-label="Previous slide">←</button>
+      <ol class="dots" role="list">
+        <li class="dot active" aria-label="Slide 1"></li>
+        <li class="dot" aria-label="Slide 2"></li>
+        <li class="dot" aria-label="Slide 3"></li>
+        <li class="dot" aria-label="Slide 4"></li>
+      </ol>
+      <button class="nav-btn" id="next" aria-label="Next slide">→</button>
+    </nav>
 
-    <div id="caption"></div>
-  </div>
+    <footer class="slide-counter" aria-live="polite">
+      <span id="current-num">01</span>
+      <span class="divider">/</span>
+      <span>04</span>
+    </footer>
 
-  <script src="script.js"></script>
+  </main>
+
 </body>
 </html>
