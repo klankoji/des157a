@@ -2,6 +2,7 @@
     'use strict';
     console.log("reading js");
 
+    // Mouse parallax on hero
     var hero = document.querySelector('#hero');
     var heroImg = document.querySelector('#hero-img');
 
@@ -15,6 +16,7 @@
         heroImg.style.transform = 'translate(0, 0)';
     });
 
+    // Hotspot captions on interior image
     var captions = {
         sunroof: "we stick our heads out on long drives. windows down, music up, nowhere to be.",
         seats: "i wanted room for everyone. my last car only had two real seats. this one always has space.",
@@ -25,6 +27,7 @@
     var captionBox = document.querySelector('#caption');
     var hotspots = document.querySelectorAll('.hotspot');
 
+    // Show caption on hover, hide on mouse leave
     hotspots.forEach(function (hotspot) {
         hotspot.addEventListener('mouseenter', function () {
             captionBox.textContent = captions[hotspot.id];
