@@ -16,7 +16,13 @@
         heroImg.style.transform = 'translate(0, 0)';
     });
 
-    // Hotspot captions on interior image
+    // Update instruction text for touch devices
+    var narrativeIntro = document.querySelector('#narrative-intro');
+    if ('ontouchstart' in window) {
+        narrativeIntro.textContent = 'tap on the image to explore';
+    }
+
+    // Hotspot captions
     var captions = {
         sunroof: "we stick our heads out on long drives. windows down, music up, nowhere to be.",
         seats: "i wanted room for everyone. my last car only had two real seats. this one always has space.",
@@ -27,8 +33,9 @@
     var captionBox = document.querySelector('#caption');
     var hotspots = document.querySelectorAll('.hotspot');
 
-    // Show caption on hover, hide on mouse leave
     hotspots.forEach(function (hotspot) {
+
+        // Hover — desktop
         hotspot.addEventListener('mouseenter', function () {
             captionBox.textContent = captions[hotspot.id];
             captionBox.style.display = 'block';
@@ -36,7 +43,25 @@
 
         hotspot.addEventListener('mouseleave', function () {
             captionBox.style.display = 'none';
+            hotspot.classList.remove('active');
         });
+
+        // Tap — mobile
+        hotspot.addEventListener('click', function () {
+            var isActive = hotspot.classList.contains('active');
+
+            hotspots.forEach(function (h) {
+                h.classList.remove('active');
+            });
+            captionBox.style.display = 'none';
+
+            if (!isActive) {
+                hotspot.classList.add('active');
+                captionBox.textContent = captions[hotspot.id];
+                captionBox.style.display = 'block';
+            }
+        });
+
     });
 
 })();
