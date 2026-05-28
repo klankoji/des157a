@@ -91,15 +91,22 @@ body {
     filter: brightness(0.75);
 }
 
+@keyframes hotspot-pulse {
+    0%, 100% { border-color: rgba(192,57,43,0.2); }
+    50% { border-color: rgba(192,57,43,0.6); }
+}
+
 .hotspot {
     position: absolute;
     cursor: pointer;
     border: 2px solid transparent;
     transition: border-color 0.25s ease, background-color 0.25s ease;
+    animation: hotspot-pulse 2s ease-in-out infinite;
 }
 
 .hotspot:hover,
 .hotspot.active {
+    animation: none;
     border-color: rgba(192,57,43,0.7);
     background-color: rgba(192,57,43,0.08);
 }
@@ -163,7 +170,14 @@ body {
     line-height: 1.65;
     font-style: italic;
     color: #f0ede8;
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#caption.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Detail sections — stacked on mobile */

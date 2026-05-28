@@ -38,11 +38,11 @@
         // Hover — desktop
         hotspot.addEventListener('mouseenter', function () {
             captionBox.textContent = captions[hotspot.id];
-            captionBox.style.display = 'block';
+            captionBox.classList.add('visible');
         });
 
         hotspot.addEventListener('mouseleave', function () {
-            captionBox.style.display = 'none';
+            captionBox.classList.remove('visible');
             hotspot.classList.remove('active');
         });
 
@@ -53,12 +53,12 @@
             hotspots.forEach(function (h) {
                 h.classList.remove('active');
             });
-            captionBox.style.display = 'none';
+            captionBox.classList.remove('visible');
 
             if (!isActive) {
                 hotspot.classList.add('active');
                 captionBox.textContent = captions[hotspot.id];
-                captionBox.style.display = 'block';
+                captionBox.classList.add('visible');
             }
         });
 
