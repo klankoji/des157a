@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Pig</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Game of <em>Pig</em></h1>
+    </header>
+
+    <main>
+
+        <section id="gamecontrol">
+            <p class="rules">Two players take turns rolling two dice. Add your roll to your score. Unless a <strong>1</strong> comes up, which ends your turn. Roll <strong>snake eyes</strong> (two 1s) and your total score resets to zero. First to <strong>30 points</strong> wins. After each roll you can pass to play it safe.</p>
+            <button id="startgame">Start Game</button>
+        </section>
+
+        <section id="gameboard">
+
+            <aside id="player1panel" class="player-panel">
+                <h2>Player 1</h2>
+                <p class="total-score"><span>0</span></p>
+                <p class="score-label">points</p>
+            </aside>
+
+            <section id="game">
+                <div class="dice-area">
+                    <img src="images/1die.svg" width="100" height="100" alt="Die showing 1" id="die1">
+                    <img src="images/1die.svg" width="100" height="100" alt="Die showing 1" id="die2">
+                </div>
+                <p id="game-message">Roll the dice to begin</p>
+            </section>
+
+            <aside id="player2panel" class="player-panel">
+                <h2>Player 2</h2>
+                <p class="total-score"><span>0</span></p>
+                <p class="score-label">points</p>
+            </aside>
+
+        </section>
+
+        <section id="actions">
+            <button id="roll" disabled>Roll</button>
+            <button id="pass" disabled>Pass</button>
+        </section>
+
+        <section id="score"></section>
+
+    </main>
+
+    <footer>
+        <p>Game of Pig &mdash; Built for Studio 3</p>
+    </footer>
+
+</body>
+</html>
