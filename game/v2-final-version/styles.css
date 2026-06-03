@@ -1,0 +1,361 @@
+:root {
+    --bg: #f5f4f0;
+    --surface: #ffffff;
+    --border: #e2e0d8;
+    --text: #1a1a1a;
+    --text-muted: #888;
+    --accent: #2d6a4f;
+    --accent-light: #d8f3dc;
+    --danger: #c1121f;
+    --radius: 16px;
+    --shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    min-width: 750px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 12px;
+}
+
+header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+header h1 em {
+    font-style: italic;
+    color: var(--accent);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#setup {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+#setup h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0;
+    color: var(--text);
+}
+
+.setup-grid {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.input-group input[type="text"] {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+    outline: none;
+    width: 160px;
+    transition: border-color 0.2s;
+}
+
+.input-group input[type="text"]:focus {
+    border-color: var(--accent);
+}
+
+.input-group input[type="text"]:disabled {
+    background: var(--bg);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.toggle-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.toggle-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.threshold-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.threshold-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.threshold-group strong {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+#threshold {
+    width: 240px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover:not(:disabled) {
+    background: #235c42;
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+button:disabled {
+    background: var(--border);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+#quit {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    font-size: 0.85rem;
+}
+
+#quit:hover {
+    background: var(--bg);
+}
+
+#gameboard {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.player-panel {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.player-panel.active {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.player-panel h2 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.player-panel .total-score {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: var(--text);
+    margin: 0;
+    line-height: 1;
+}
+
+.player-panel .score-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+#game {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.dice-area {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-area img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s ease;
+}
+
+#game-message {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+#actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+#pass {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+#pass:hover:not(:disabled) {
+    background: var(--accent-light);
+}
+
+#pass:disabled {
+    border-color: var(--border);
+    color: var(--text-muted);
+    background: transparent;
+}
+
+#score {
+    text-align: center;
+    min-height: 32px;
+}
+
+#score h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 400;
+    margin: 0;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+}
+
+@keyframes diceRoll {
+    0%   { transform: rotate(0deg) scale(1); }
+    25%  { transform: rotate(-10deg) scale(1.06); }
+    50%  { transform: rotate(10deg) scale(1.06); }
+    75%  { transform: rotate(-5deg) scale(1.02); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+.rolling {
+    animation: diceRoll 0.35s ease;
+}
+
+@media (min-width: 1200px) {
+    body {
+        padding: 0 40px;
+    }
+}
