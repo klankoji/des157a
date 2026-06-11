@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extra Credit Process Work — Kaushik Lankoji</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+
+      <header>
+        <p class="back-link"><a href="../index.html">&larr; Back to Portal</a></p>
+        <h1>Extra Credit Process Work</h1>
+        <h2>Kaushik Lankoji &mdash; DES 157A &mdash; Interactive Media II &mdash; Spring 2026</h2>
+      </header>
+
+      <main>
+
+        <section>
+          <div class="section-header">
+            <h2>Usability Test Tasks</h2>
+            <p class="label">What testers were asked to do</p>
+          </div>
+          <ul class="task-list">
+            <li>
+              <span class="task-num">Task 1</span>
+              Without any explanation, try to figure out how to play the game and take your first turn.
+            </li>
+            <li>
+              <span class="task-num">Task 2</span>
+              Play until either you or the computer wins a full round.
+            </li>
+            <li>
+              <span class="task-num">Task 3</span>
+              Change the winning score to 50 and start a new game.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="section-header">
+            <h2>Interview Questions</h2>
+            <p class="label">Asked after completing all three tasks</p>
+          </div>
+          <ol class="question-list">
+            <li>What was the first thing you noticed when the game loaded?</li>
+            <li>Was there any moment where you were not sure what to do next?</li>
+            <li>Could you tell whose turn it was at all times?</li>
+            <li>Did you feel like you needed a rules explanation at any point?</li>
+            <li>What would you change or add to make this easier to use?</li>
+          </ol>
+        </section>
+
+        <section>
+          <div class="section-header">
+            <h2>Test Results</h2>
+            <p class="label">Responses from three testers</p>
+          </div>
+
+          <div class="tester">
+            <p class="tester-name">Tester 1 &mdash; Mom</p>
+            <p class="tester-demo">42, not a gamer, no prior experience with the project</p>
+            <ul class="result-list">
+              <li><span class="result-q">Q1</span> Noticed the dice graphic first, was drawn to it right away.</li>
+              <li><span class="result-q">Q2</span> Was not sure what to do after the computer rolled. Thought the game had frozen and was waiting on her.</li>
+              <li><span class="result-q">Q3</span> Not always. Said the player names blended in and were hard to track at a glance.</li>
+              <li><span class="result-q">Q4</span> Yes. Did not know what "hold" meant until after a few turns.</li>
+              <li><span class="result-q">Q5</span> Suggested adding a short tooltip or tutorial that explains the buttons before you start.</li>
+            </ul>
+          </div>
+
+          <div class="tester">
+            <p class="tester-name">Tester 2 &mdash; Dad</p>
+            <p class="tester-demo">49s, casual phone gamer, no prior experience with the project</p>
+            <ul class="result-list">
+              <li><span class="result-q">Q1</span> Noticed the score numbers first, started scanning them immediately.</li>
+              <li><span class="result-q">Q2</span> Was not sure if the game had actually ended when the win condition triggered. Missed the win message.</li>
+              <li><span class="result-q">Q3</span> Mostly yes, but said it could be made more obvious who is active.</li>
+              <li><span class="result-q">Q4</span> A little bit, but figured it out on his own after a couple of turns.</li>
+              <li><span class="result-q">Q5</span> Wanted the winning moment to feel bigger and more noticeable.</li>
+            </ul>
+          </div>
+
+          <div class="tester">
+            <p class="tester-name">Tester 3 &mdash; Sister</p>
+            <p class="tester-demo">High School, occasional gamer, no prior experience with the project</p>
+            <ul class="result-list">
+              <li><span class="result-q">Q1</span> Noticed the overall layout first and said it looked clean.</li>
+              <li><span class="result-q">Q2</span> Got confused during the computer turn. Was not sure if the game was loading or if it had passed back to her turn.</li>
+              <li><span class="result-q">Q3</span> Yes, but said the active player highlight could be stronger and more visually distinct.</li>
+              <li><span class="result-q">Q4</span> No, picked it up quickly without needing any explanation.</li>
+              <li><span class="result-q">Q5</span> Suggested adding a more reactive animation when you roll a 1 so the penalty feels more impactful.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-header">
+            <h2>What I Learned</h2>
+            <p class="label">Synthesis</p>
+          </div>
+          <p>Running these tests made a few things very clear. The biggest issue across all three testers was the computer turn. None of them could reliably tell when the computer was actively taking its turn versus when the game was waiting on them. That confusion broke the flow every time and is something I need to fix first. The second pattern that came up was the active player indicator. Two out of three testers said they lost track of whose turn it was at some point, which tells me the current visual treatment is not strong enough. Beyond that, the win state was too easy to miss, the word "hold" was not obvious to a first-time player, and the overall feedback on big moments like rolling a 1 or winning felt flat. All of this points toward the same core problem: the game does not communicate its state clearly enough in real time. My improvements are going to focus on making the active player much more visually distinct, adding a visible indicator during the computer turn, improving the win screen, and surfacing a basic how-to-play somewhere in the interface.</p>
+        </section>
+
+      </main>
+
+      <footer>
+        <p>Kaushik Lankoji &mdash; <a href="mailto:&#107;&#108;&#97;&#110;&#107;&#111;&#106;&#105;&#64;&#117;&#99;&#100;&#97;&#118;&#105;&#115;&#46;&#101;&#100;&#117;">Email Me</a></p>
+      </footer>
+
+    </div>
+  </body>
+</html>
